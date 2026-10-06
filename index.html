@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>lumen studio. &mdash; photography &amp; editorial</title>
+<meta name="description" content="lumen studio. is an editorial photography studio creating portraits, campaigns and still life with architectural light." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div class="app-window">
+
+    <nav class="navbar" aria-label="Primary">
+      <div class="nav-left">
+        <a class="nav-pill" href="#home">home</a>
+        <a class="nav-link" href="#about">about us</a>
+        <a class="nav-link" href="#faqs">faqs</a>
+      </div>
+
+      <a class="nav-logo" href="#home">lumen studio.</a>
+
+      <div class="nav-right">
+        <a class="nav-link" href="#products">portfolio</a>
+        <a class="nav-link" href="#team">team</a>
+        <div class="nav-actions">
+          <button class="icon-btn" id="searchBtn" type="button" aria-label="Search portfolio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          </button>
+          <button class="icon-btn" id="accountBtn" type="button" aria-label="Studio account" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </button>
+          <a class="btn-contact" href="#contact">
+            Contact
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+        </div>
+        <div class="account-pop" id="accountPop" role="dialog" aria-label="Studio account info">
+          <strong>lumen studio. client desk</strong>
+          <p>Bookings are currently open for spring campaigns. Reach the studio any weekday, 9 to 6.</p>
+          <a href="#contact" class="pop-link">Go to contact &rarr;</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-backdrop" aria-hidden="true"><span>in the frame</span></div>
+
+        <div class="hero-content">
+          <div class="hero-left">
+            <p class="lead">We build images that do not just document a moment &mdash; they become its signature. Portraits, campaigns and still life, shot with architectural control of light.</p>
+            <p class="lead">Every frame is a study in form, texture and restraint. We shoot slow, grade thoughtfully, and deliver work that holds up on a gallery wall.</p>
+            <a class="btn-primary" href="#products">View All Collections</a>
+          </div>
+
+          <div class="hero-center">
+            <div class="display-card">
+              <img class="display-img grade-blue" id="heroImg" src="hero.jpg" alt="Editorial studio portrait lit with soft directional light" />
+              <button class="hotspot hotspot-1" type="button" data-tip="tipA" aria-label="Lighting notes"><span>&#43;</span></button>
+              <button class="hotspot hotspot-2" type="button" data-tip="tipB" aria-label="Lens notes"><span>&#43;</span></button>
+              <div class="tip" id="tipA" role="tooltip">Golden hour side light, diffused through a 1.2m scrim for control.</div>
+              <div class="tip" id="tipB" role="tooltip">Shot on an 85mm at f/1.4 for gentle compression and shallow depth.</div>
+              <span class="since">Since 2015</span>
+            </div>
+
+            <div class="grade-switcher" role="group" aria-label="Choose a color grade">
+              <span>Choose a grade</span>
+              <div class="swatches">
+                <button class="swatch swatch-blue is-active" type="button" data-grade="grade-blue" aria-label="Blue grade" aria-pressed="true"></button>
+                <button class="swatch swatch-purple" type="button" data-grade="grade-purple" aria-label="Purple grade" aria-pressed="false"></button>
+                <button class="swatch swatch-red" type="button" data-grade="grade-red" aria-label="Red grade" aria-pressed="false"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="consult">
+              <div class="consult-head">
+                <div class="consult-avatar" aria-hidden="true"></div>
+                <div>
+                  <h4>Get a Free Consultation</h4>
+                  <p>Tell us about your shoot and a specialist will contact you shortly to shape the brief.</p>
+                </div>
+              </div>
+              <button class="btn-primary btn-block" id="bookBtn" type="button">
+                Request a Call
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <header class="section-head reveal">
+          <span class="eyebrow">portfolio</span>
+          <h2>Selected work</h2>
+          <p class="muted">A rotating edit of commissions and personal studies. Open any frame to read the notes.</p>
+        </header>
+
+        <div class="filter-bar" id="filterBar" role="group" aria-label="Filter portfolio">
+          <button class="chip is-active" type="button" data-filter="all">all</button>
+          <button class="chip" type="button" data-filter="portrait">portrait</button>
+          <button class="chip" type="button" data-filter="editorial">editorial</button>
+          <button class="chip" type="button" data-filter="wedding">wedding</button>
+          <button class="chip" type="button" data-filter="product">product</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <button class="tile g1 reveal" type="button" data-category="portrait" data-title="Quiet Light" data-meta="Portrait &middot; Studio &middot; 2024" data-desc="A single softbox and a bare wall. We wanted the subject to sit inside the shadow rather than beside it.">
+            <span class="tile-info"><strong>Quiet Light</strong><em>Portrait &middot; 2024</em></span>
+          </button>
+          <button class="tile g2 reveal" type="button" data-category="editorial" data-title="Blue Hour" data-meta="Editorial &middot; Campaign &middot; 2024" data-desc="A twilight campaign built on long exposures and a controlled cold palette for a fashion house.">
+            <span class="tile-info"><strong>Blue Hour</strong><em>Editorial &middot; 2024</em></span>
+          </button>
+          <button class="tile g3 reveal" type="button" data-category="wedding" data-title="Vows" data-meta="Wedding &middot; Outdoor &middot; 2023" data-desc="Documentary coverage of an outdoor ceremony, leaning on natural window light and quiet framing.">
+            <span class="tile-info"><strong>Vows</strong><em>Wedding &middot; 2023</em></span>
+          </button>
+          <button class="tile g4 reveal" type="button" data-category="product" data-title="Form Study" data-meta="Product &middot; Catalogue &middot; 2024" data-desc="A still life study on seamless paper, sculpting shadow to describe surface and edge.">
+            <span class="tile-info"><strong>Form Study</strong><em>Product &middot; 2024</em></span>
+          </button>
+          <button class="tile g5 reveal" type="button" data-category="portrait" data-title="Backstage" data-meta="Portrait &middot; Editorial &middot; 2023" data-desc="Candid frames captured between takes, preserving the texture of a working set.">
+            <span class="tile-info"><strong>Backstage</strong><em>Portrait &middot; 2023</em></span>
+          </button>
+          <button class="tile g6 reveal" type="button" data-category="editorial" data-title="Monochrome" data-meta="Editorial &middot; Print &middot; 2022" data-desc="Black and white print series exploring contrast ratio as the primary subject.">
+            <span class="tile-info"><strong>Monochrome</strong><em>Editorial &middot; 2022</em></span>
+          </button>
+          <button class="tile g7 reveal" type="button" data-category="wedding" data-title="First Dance" data-meta="Wedding &middot; Reception &middot; 2023" data-desc="Available light, high ISO and a fast prime to hold the motion of the room.">
+            <span class="tile-info"><strong>First Dance</strong><em>Wedding &middot; 2023</em></span>
+          </button>
+          <button class="tile g8 reveal" type="button" data-category="product" data-title="Still Life 02" data-meta="Product &middot; Brand &middot; 2024" data-desc="Gradient backdrop with a single grazing light to define the silhouette.">
+            <span class="tile-info"><strong>Still Life 02</strong><em>Product &middot; 2024</em></span>
+          </button>
+          <button class="tile g9 reveal" type="button" data-category="editorial" data-title="Neon Nocturne" data-meta="Editorial &middot; Night &middot; 2024" data-desc="A night series using practical colour light and a slow shutter.">
+            <span class="tile-info"><strong>Neon Nocturne</strong><em>Editorial &middot; 2024</em></span>
+          </button>
+        </div>
+        <p class="empty-note" id="emptyNote" hidden>No frames in this collection yet &mdash; try another filter.</p>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-head reveal">
+          <span class="eyebrow">about us</span>
+          <h2>Slow photography, built on light</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="lead">lumen studio. began in a rented room with one light and a stubborn belief that restraint beats noise. A decade later we still shoot the same way: fewer frames, better decisions.</p>
+            <p class="lead">We work with brands, publications and families who want images with staying power &mdash; pictures that feel like they were taken on purpose.</p>
+            <a class="btn-secondary" href="#contact">Start a project</a>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><strong>10+</strong><span>years behind the camera</span></div>
+            <div class="stat"><strong>420</strong><span>sessions delivered</span></div>
+            <div class="stat"><strong>38</strong><span>brand commissions</span></div>
+            <div class="stat"><strong>2</strong><span>print awards</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="team">
+        <header class="section-head reveal">
+          <span class="eyebrow">team</span>
+          <h2>The people in the room</h2>
+          <p class="muted">A small crew that moves quietly and shoots deliberately.</p>
+        </header>
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <div class="avatar a1">AM</div>
+            <h3>Aria Mensah</h3>
+            <p>Founder &amp; Lead Photographer</p>
+          </article>
+          <article class="team-card reveal">
+            <div class="avatar a2">NB</div>
+            <h3>Noah Blake</h3>
+            <p>Editorial Photographer</p>
+          </article>
+          <article class="team-card reveal">
+            <div class="avatar a3">SR</div>
+            <h3>Sofia Rossi</h3>
+            <p>Stylist &amp; Set Director</p>
+          </article>
+          <article class="team-card reveal">
+            <div class="avatar a4">KT</div>
+            <h3>Kai Tanaka</h3>
+            <p>Retoucher &amp; Colourist</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faqs" id="faqs">
+        <header class="section-head reveal">
+          <span class="eyebrow">faqs</span>
+          <h2>Before you book</h2>
+        </header>
+        <div class="accordion" id="accordion">
+          <div class="acc-item reveal">
+            <button class="acc-trigger" type="button" aria-expanded="false"><span>What does a session include?</span><span class="acc-icon">&#43;</span></button>
+            <div class="acc-panel"><p>Every session includes a planning call, curated shooting time, professional retouching and a private online gallery of the final edits.</p></div>
+          </div>
+          <div class="acc-item reveal">
+            <button class="acc-trigger" type="button" aria-expanded="false"><span>How far ahead should I book?</span><span class="acc-icon">&#43;</span></button>
+            <div class="acc-panel"><p>Portrait and product work is usually available within two weeks. Weddings and campaigns are best booked three to six months out.</p></div>
+          </div>
+          <div class="acc-item reveal">
+            <button class="acc-trigger" type="button" aria-expanded="false"><span>Do you shoot on location?</span><span class="acc-icon">&#43;</span></button>
+            <div class="acc-panel"><p>Yes. We travel with a portable lighting kit and have shot on location across three continents. Travel is quoted per project.</p></div>
+          </div>
+          <div class="acc-item reveal">
+            <button class="acc-trigger" type="button" aria-expanded="false"><span>How are files delivered?</span><span class="acc-icon">&#43;</span></button>
+            <div class="acc-panel"><p>You receive high resolution files plus a web set through a private gallery link that stays live for twelve months.</p></div>
+          </div>
+          <div class="acc-item reveal">
+            <button class="acc-trigger" type="button" aria-expanded="false"><span>Can we licence images commercially?</span><span class="acc-icon">&#43;</span></button>
+            <div class="acc-panel"><p>Absolutely. Commercial licensing is scoped per campaign and agreed before the shoot so there are no surprises later.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <span class="eyebrow">contact</span>
+            <h2>Let us make something lasting</h2>
+            <p class="muted">Tell us what you have in mind. We reply to every enquiry within one working day.</p>
+            <ul class="contact-list">
+              <li><span>Studio</span>14 Beacon Wharf, Studio 3</li>
+              <li><span>Email</span>hello@lumenstudio.photo</li>
+              <li><span>Phone</span>+1 415 220 7788</li>
+              <li><span>Hours</span>Mon to Fri, 9:00 to 18:00</li>
+            </ul>
+            <div class="contact-socials">
+              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+              <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest">pt</a>
+              <a href="https://behance.net" target="_blank" rel="noopener" aria-label="Behance">be</a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="cName">Name</label>
+              <input id="cName" name="name" type="text" placeholder="Your full name" required />
+              <small class="err" data-err="cName"></small>
+            </div>
+            <div class="field">
+              <label for="cEmail">Email</label>
+              <input id="cEmail" name="email" type="email" placeholder="you@example.com" required />
+              <small class="err" data-err="cEmail"></small>
+            </div>
+            <div class="field">
+              <label for="cType">Session type</label>
+              <select id="cType" name="type" required>
+                <option value="">Select a session</option>
+                <option>Portrait</option>
+                <option>Editorial / Campaign</option>
+                <option>Wedding</option>
+                <option>Product</option>
+              </select>
+              <small class="err" data-err="cType"></small>
+            </div>
+            <div class="field">
+              <label for="cMsg">Message</label>
+              <textarea id="cMsg" name="message" rows="4" placeholder="Dates, ideas, references" required></textarea>
+              <small class="err" data-err="cMsg"></small>
+            </div>
+            <button class="btn-primary btn-block" type="submit">Send enquiry</button>
+            <p class="form-success" id="formSuccess" hidden>Thanks &mdash; your enquiry is in. We will be in touch shortly.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-socials">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">&times;</a>
+      </div>
+      <div class="footer-center">
+        <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7 7 7-7"></path></svg>
+        </button>
+      </div>
+      <div class="footer-nav">
+        <button class="icon-btn" id="prevGrade" type="button" aria-label="Previous grade">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+        <button class="icon-btn" id="nextGrade" type="button" aria-label="Next grade">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<div class="overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search portfolio" hidden>
+  <div class="overlay-panel">
+    <input class="search-input" id="searchInput" type="text" placeholder="Search frames, categories..." aria-label="Search portfolio" />
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<div class="overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Project detail" hidden>
+  <div class="lightbox-panel">
+    <button class="close-btn" data-close type="button" aria-label="Close">&times;</button>
+    <div class="lightbox-art" id="lightboxArt"></div>
+    <div class="lightbox-body">
+      <h3 id="lightboxTitle">Title</h3>
+      <p class="lightbox-meta" id="lightboxMeta">Meta</p>
+      <p class="muted" id="lightboxDesc">Description</p>
+      <button class="btn-primary" id="bookLook" type="button">Book this look</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="bookingModal" role="dialog" aria-modal="true" aria-label="Request a call" hidden>
+  <div class="modal-panel">
+    <button class="close-btn" data-close type="button" aria-label="Close">&times;</button>
+    <h3>Request a call</h3>
+    <p class="muted">Drop your details and we will ring you back to shape the brief.</p>
+    <form id="bookingForm" novalidate>
+      <div class="field">
+        <label for="bName">Name</label>
+        <input id="bName" type="text" required placeholder="Your full name" />
+        <small class="err" data-err="bName"></small>
+      </div>
+      <div class="field">
+        <label for="bPhone">Phone</label>
+        <input id="bPhone" type="tel" required placeholder="+1 000 000 0000" />
+        <small class="err" data-err="bPhone"></small>
+      </div>
+      <div class="field">
+        <label for="bSubject">What is it about?</label>
+        <input id="bSubject" type="text" required placeholder="e.g. Portrait session" />
+        <small class="err" data-err="bSubject"></small>
+      </div>
+      <button class="btn-primary btn-block" type="submit">Request call back</button>
+      <p class="form-success" id="bookingSuccess" hidden>Nice one &mdash; we will call you back shortly.</p>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

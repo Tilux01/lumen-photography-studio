@@ -1,0 +1,19 @@
+{
+  "project_name": "Lumen Studio",
+  "niche": "Photography studio",
+  "brand_name": "lumen studio.",
+  "brand_color": "#0047FF",
+  "pages": "Single-page marketing site: Home, About, Portfolio (Products), Team, FAQs, Contact",
+  "tech_stack": "Static HTML + CSS + Vanilla JS",
+  "features": [
+    "Editorial hero with oversized typography backdrop",
+    "Central featured photograph display with interactive hotspot tooltips",
+    "Ambient color grade switcher (Blue / Purple / Red mood presets)",
+    "Free-consultation / book-a-session widget",
+    "Portfolio masonry gallery with filter",
+    "About, Team, FAQs and Contact sections",
+    "Smooth scroll nav, scroll-to-top, working contact form"
+  ],
+  "tone": "Editorial, minimal, premium",
+  "fonts": "Plus Jakarta Sans"
+}
