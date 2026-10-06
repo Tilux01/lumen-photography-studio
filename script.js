@@ -297,3 +297,37 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
 });
+
+(function () {
+  var root = document.documentElement;
+  var frame = null;
+
+  function syncType() {
+    var w = window.innerWidth || root.clientWidth;
+    var h = window.innerHeight || root.clientHeight;
+    var span = w / h;
+    var t = Math.min(1, Math.max(0, (w - 360) / 1560));
+    var wide = Math.min(1, Math.max(0, (span - 1.1) / 1.1));
+    var mix = Math.min(1, Math.max(0, t * 0.75 + wide * 0.25));
+
+    root.style.setProperty('--wght-display', Math.round(700 + mix * 100));
+    root.style.setProperty('--wght-head', Math.round(650 + mix * 60));
+    root.style.setProperty('--wght-sub', Math.round(600 + mix * 40));
+    root.style.setProperty('--wght-strong', Math.round(700 + mix * 80));
+  }
+
+  function onResize() {
+    if (frame) { cancelAnimationFrame(frame); }
+    frame = requestAnimationFrame(syncType);
+  }
+
+  syncType();
+  window.addEventListener('resize', onResize, { passive: true });
+  window.addEventListener('orientationchange', onResize, { passive: true });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', onResize, { passive: true });
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncType);
+  }
+})();
