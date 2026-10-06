@@ -4,7 +4,6 @@
 
   document.addEventListener('DOMContentLoaded', function () {
 
-    var PROGRESS = document.getElementById('progressFill');
     var NAVBAR = document.getElementById('navbar');
     var HERO = document.querySelector('.hero');
     var HERO_WORD = document.getElementById('heroWord');
@@ -296,8 +295,6 @@
       });
     });
 
-    var marquee = document.getElementById('marqueeTrack');
-    if (marquee) marquee.innerHTML = marquee.innerHTML + marquee.innerHTML;
 
     var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
     if ('IntersectionObserver' in window && !reduce) {
@@ -520,7 +517,6 @@
         ticking = false;
         var y = window.scrollY || window.pageYOffset;
         var max = document.documentElement.scrollHeight - window.innerHeight;
-        if (PROGRESS) PROGRESS.style.width = (max > 0 ? (y / max) * 100 : 0).toFixed(2) + '%';
         if (NAVBAR) NAVBAR.classList.toggle('is-stuck', y > 24);
         if (!reduce) {
           setHero(y);
